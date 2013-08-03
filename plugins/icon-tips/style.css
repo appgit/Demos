@@ -1,0 +1,41 @@
+.icon-tips-outer{
+	position: relative;
+	display: inline-block;
+	width: 33px;
+	height: 33px;
+	border-radius: 30px;
+	box-shadow: 0 5px 5px #ccc;
+	background-color: #fff;
+	cursor: pointer;
+}
+.icon-tips-content{
+	width: 160px;
+	padding: 10px 15px;
+	position: absolute;
+	top: -60px;	
+	left: -50px;
+	text-align: center;
+	background-color: white;
+	border-radius: 8px;
+	box-shadow: 0 5px 5px #ccc;
+	color: #929ca3;
+/*	-ms-word-break: break-all;
+	word-break: break-all;*/
+}
+.down-icon{
+	display: inline-block;
+	position: absolute;
+	height: 20px;
+	width: 37px;
+	background: url('../img/icon.png');
+	background-position: 0 -168px;
+	top:-30px;
+	left: -4px;
+}
+.icon-tips-outer .icontips-link{
+	background: url("../img/icon.png");
+	display: block;
+	height: 17px;
+	width: 17px;
+	margin: 25%;
+}

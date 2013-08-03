@@ -1,0 +1,20 @@
+.my-button-radious{
+	cursor:pointer;
+	font-weight: bold;
+	border-radius: 30px;
+	text-align: center;
+	color: #9297a0;
+	box-shadow: 0 3px 4px #cdcdcd;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+}
+/*._bg-color{
+	background-color: #ffffff;
+}*/
+.my-button-radious-hover{
+	background-color: #f76a38 !important;
+	color: white !important;
+}
+.my-button-radious-active{
+	background-color: #67737d !important;	
+}

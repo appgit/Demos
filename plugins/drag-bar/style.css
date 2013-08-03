@@ -1,0 +1,50 @@
+.drag-bar-outer{
+	display: inline-block;
+	width: 276px; 
+	height: 16px; 
+	background-color: #ffffff;
+	box-shadow: 0 2px 1px #ccc;  
+	border-radius: 30px; 
+	padding: 2px 3px;
+}
+.drag-bar-btn-left{
+	width:16px;
+	display: inline-block;
+	height: 16px; 
+	background: url('../img/icon.png');
+	background-position: -130px -95px;
+	float: left;
+}
+.drag-bar-btn-left-hover{
+	background-position: -130px -71px;
+	cursor: pointer;
+}
+.drag-bar-btn-right{
+	width: 16px; 
+	height: 16px; 
+	display: inline-block;
+	background: url('../img/icon.png');
+	background-position: -159px -95px;
+	float: left;
+}
+.drag-bar-btn-right-hover{
+	background-position: -159px -71px;
+	cursor: pointer;
+}
+.drag-bar-scroll-outer{
+	float: left;
+	width: 244px; 
+	height: 16px;
+	display: inline-block;
+	position: relative;
+}
+.drag-bar-scroll{
+	background: url('../img/icon.png');
+	background-position: -109px 0;
+	width:108px;
+	height: 17px;
+	display: inline-block;
+	position: absolute;
+	left: 0; 
+	top:0;
+}

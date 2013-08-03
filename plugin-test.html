@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>js-plugin-test</title>
+	<script src = "jquery/jquery.js"></script>
+	<link rel="stylesheet" href="css/reset.css">
+			<!-- my-plugins -->
+	<script src = "plugins/search-bar/search-bar.js"></script>
+	 <script src = "plugins/list-bar/list-bar.js"></script>
+	<script src = "plugins/radiusbox/radiusbox.js"></script>
+	<script src = "plugins/checkbox/checkbox.js"></script>
+	<script src = "plugins/switch-button/switch-button.js"></script>
+	<script src = "plugins/star-tips/star-tips.js"></script>
+	<script src = "plugins/drag-button/drag-button.js"></script>
+	<script src = "plugins/drag-bar/drag-bar.js"></script>
+	<script src = "plugins/drag-button2/drag-button2.js"></script>
+	<script src = "plugins/icon-tips/icon-tips.js"></script>
+	<script src = "plugins/img-info/img-info.js"></script>
+	<script src = "plugins/slide/slide.js"></script>
+	<script src = "plugins/circle-button/circle-button.js"></script>
+	<!-- // <script src = "plugins/vedio-player/vedio-player.js"></script> -->
+
+	<link rel="stylesheet" href="plugins/search-bar/style.css">
+	<link rel="stylesheet" href="plugins/list-bar/style.css">
+	<link rel="stylesheet" href="plugins/circle-button/style.css">
+	<link rel="stylesheet" href="plugins/checkbox/style.css">
+	<link rel="stylesheet" href="plugins/radiusbox/style.css">
+	<link rel="stylesheet" href="plugins/switch-button/style.css">
+	<link rel="stylesheet" href="plugins/star-tips/style.css">
+	<link rel="stylesheet" href="plugins/icon-tips/style.css">
+	<link rel="stylesheet" href="plugins/drag-button/style.css">
+	<link rel="stylesheet" href="plugins/drag-button2/style.css">
+	<link rel="stylesheet" href="plugins/drag-bar/style.css">
+	<link rel="stylesheet" href="plugins/icon-tips/style.css">
+	<link rel="stylesheet" href="plugins/img-info/style.css">
+	<link rel="stylesheet" href="plugins/slide/style.css">
+	<link rel="stylesheet" href="plugins/vedio-player/style.css">
+	
+<style>
+
+
+
+</style>
+</head>
+<body style="background-color:#e8e8e8; padding:150px">
+	<div class="hh">
+		
+	</div>
+
+<script>
+
+;;;(function  () {
+
+	$.fn.vedioPlayer = function  (opts) {
+		
+		opts = $.extend({
+		
+			url: 'plugins/img/vedio-img.png',
+			button_color: '#75828c',
+			button_hover_color: '#f76c3a',
+			vedio_name: 'The Beach side of Life',
+			width: '285'
+		
+		},opts);
+
+		var $html = $('<div><div><img><div><span></span><a></a></div></div><div><div></div><div></div></div><audio class="audio"  id ="audioo" src="C:\\Users\\zhan\\Desktop\\Ò¦±´ÄÈ - »­Çé.mp3"  loop autoplay></audio></div>')
+			.css('width', opts.width);
+
+			var _audio =  $('')
+
+			_audio.appendTo($html.parent())
+
+
+		var $source = $html.addClass('vedio_outer').children().first().addClass('img_outer');
+
+		$source.children('img').attr('src', opts.url);
+
+		var $span = $source.children('div').addClass('vedio_name_outer')
+		.children('span').text(opts.vedio_name).addClass('vedio_name');
+
+		var $pause_btn = $span.next().addClass('pause_button');
+
+		var $dragbar = $source.next().children().first().dragButton();
+
+		var  $play_buttons	= $dragbar.next().addClass('play_buttons');
+
+		var $ul = $('<ul><li></li><li></li><li></li><li></li><li></li></ul>').addClass('clearfix');
+
+		var $li = $ul.find('li').addClass('left');
+
+		var bg_pos = ['-49px -137px','-84px -137px','-119px -137px','-154px -137px','-190px -137px'];
+
+		var bg_pos_hover=['-49px -167px','-84px -167px','-119px -167px','-154px -167px','-190px -167px'];
+
+		$li.each(function(index) {
+
+			this.clicked = false;
+			
+			$(this).css('background-position',bg_pos[index])
+			.hover(function() {
+
+				$(this).css('background-position',bg_pos_hover[index])
+
+			}, function() {
+
+				$(this).css('background-position',bg_pos[index])
+
+			})
+			
+		});
+
+
+		$play_buttons.append($ul);
+
+		this.append($html);
+
+		return this;
+		
+	}
+})()
+$(function(){
+
+	// $('.img-wrap').img_slideBar(5); 
+	// $('body').img_slideBar(5)
+	$('.hh').vedioPlayer({url:'plugins/img/img-heading.png'});
+
+
+})
+
+</script>
+
+</body>
+</html>

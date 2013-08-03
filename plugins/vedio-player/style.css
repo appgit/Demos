@@ -1,0 +1,51 @@
+
+.vedio_outer{
+	background-color: #fff;
+	display: inline-block;
+	padding: 10px;
+	box-shadow: 0 6px 5px #ccc;
+	border-radius: 5px;
+}
+.vedio_outer .img_outer{
+	position: relative;
+}
+.play_buttons ul{
+	width:150px;
+	display: block;
+	margin: 0 auto;
+}
+.play_buttons ul li{
+	margin-left: 5px;
+	border-radius: 30px;
+	background-color: #717d87;
+	width: 20px;
+	height: 20px;
+	border: 2px solid #e0e0e0;
+	background: url('../img/icon.png');
+	cursor: pointer;
+}
+.vedio_name_outer{
+	height: 32px;
+	width: 285px;
+	background: rgba(118,131,141,0.8);
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.vedio_outer .vedio_name{
+	display: inline-block;
+	margin-top: 6px;
+	color: #fff;
+	padding-left: 10px;
+}
+
+.vedio_outer .pause_button{
+	background: url('../img/icon.png');
+	background-position: -89px -27px;
+	width: 25px;
+	height: 27px;
+	float: right;
+	display: inline-block;
+	cursor: pointer;
+}

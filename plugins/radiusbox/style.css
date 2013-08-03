@@ -1,0 +1,19 @@
+.radiusbox-style{
+	width: 18px;
+	display: inline-block;
+	height: 18px;
+	background-color:#ffffff;
+	border: 2px solid #cfcfcf;
+	border-radius: 100%;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+.radiusbox-style .radiusbox-chosed{
+	width:12px;
+	height:12px;
+	display:block;
+	background:url('../img/icon.png');
+	background-position: -191px -31px;
+	margin:3px auto;
+}
+

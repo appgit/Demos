@@ -1,0 +1,35 @@
+.star-tips{
+	display: inline-block;
+	position: relative;
+	width: 23px;
+	height: 23px;
+	background: url('../img/icon.png');
+	background-position: 4px -197px;
+}
+.startips-hover{
+	background-position: -25px -197px;
+}
+.star-tips-content{
+	width:160px;
+	padding:22px;
+	position: absolute;
+	top: -60px;	
+	left: -50px;
+/*	-ms-word-break: break-all;
+	word-break: break-all;*/
+	text-align: center;
+	background-color: white;
+	border-radius: 8px;
+	box-shadow: 0 5px 5px #ccc;
+	color: #929ca3;
+}
+.tips-content-down-icon{
+	display: inline-block;
+	position: absolute;
+	height: 20px;
+	width: 37px;
+	background: url('../img/icon.png');
+	background-position: 0 -168px;
+	top:-33px;
+	left: -7px;
+}

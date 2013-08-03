@@ -1,0 +1,62 @@
+
+.dragbar-common{
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	display: inline-block;
+
+}
+.dragbar2-wrap{
+	height:20px;
+	width:285px;
+	background-color: inherit;
+	position: relative;
+
+}
+.dragbar2-left{
+	float: left;
+	height: 5px;
+	width:0px;
+	margin: 7.5px 0;	
+	background-color: #99a4ac;
+	border-radius:30px 0 0 30px;
+}
+.dragbar2-middle{
+	float: left;
+	height: 5px;
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	width:285px;
+	margin: 6.5px 0;	
+	background-color: #ffffff;
+	border-radius:30px;
+}
+.dragbar2-right{
+	float: left;
+	height: 5px;
+	width:0px;
+	margin: 7.5px 0;	
+	background-color: #99a4ac;
+	border-radius:0 30px 30px 0;
+}
+.dragbar2-button1{
+	float: left;
+	position: absolute;
+	top:0;
+	left: 0;
+	height:20px;
+	width:20px;
+	cursor: pointer;
+	border-radius: 30px;
+	background: url("../img/icon.png") repeat scroll -212px -27px transparent;
+}
+.dragbar2-button2{
+	float: left;
+	position: absolute;
+	top:0;
+	left: 265px;
+	height:20px;
+	width:20px;
+	cursor: pointer;
+	border-radius: 30px;
+	background: url("../img/icon.png") repeat scroll -212px -27px transparent;
+}

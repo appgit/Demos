@@ -1,0 +1,17 @@
+.img-slide-button-outer{
+	display: inline-block;
+	position: absolute;
+	background-color: #ffffff;
+	padding: 10px;
+	box-shadow: 0 2px 2px #ccc;
+	border-radius: 8px 8px;
+	top:97%;
+	left: 42%;
+}
+.img-slide-button-outer ul{
+	display: inline-block;
+}
+.img_slide-buttons{
+	padding: 0 4.5px;
+	cursor: pointer;
+}

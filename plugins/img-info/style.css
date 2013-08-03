@@ -1,0 +1,14 @@
+.img_info_outer{
+	display: inline-block;
+	word-break: break-all;
+	padding: 10px;
+	background-color: #fff;
+	box-shadow: 0 6px 5px #ccc;
+	border-radius: 5px;
+}
+.img_outer{
+	margin: 0 auto 15px;
+}
+.content_outer p{
+	margin-top: 5px;
+}

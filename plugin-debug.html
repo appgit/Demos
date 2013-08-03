@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>js-plugin-test</title>
+	<script src = "jquery/jquery.js"></script>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+			<!-- my-plugins -->
+	<script src = "plugins/checkbox/checkbox.js"></script>
+	<script src = "plugins/circle-button/circle-button.js"></script>
+	<script src = "plugins/drag-button/drag-button.js"></script>
+	<script src = "plugins/drag-button2/drag-button2.js"></script>
+	<script src = "plugins/drag-bar/drag-bar.js"></script>
+	<script src = "plugins/icon-tips/icon-tips.js"></script>
+	<script src = "plugins/img-info/img-info.js"></script>
+	<script src = "plugins/list-bar/list-bar.js"></script>
+	<script src = "plugins/radiusbox/radiusbox.js"></script>
+	<script src = "plugins/search-bar/search-bar.js"></script>
+	<script src = "plugins/star-tips/star-tips.js"></script>
+	<script src = "plugins/slide/slide.js"></script>
+	<script src = "plugins/switch-button/switch-button.js"></script>
+	<script src = "plugins/vedio-player/vedio-player.js"></script>
+
+			<!-- plugin-styles -->
+	<link rel="stylesheet" href="plugins/circle-button/style.css">
+	<link rel="stylesheet" href="plugins/checkbox/style.css">
+	<link rel="stylesheet" href="plugins/drag-button/style.css">
+	<link rel="stylesheet" href="plugins/drag-button2/style.css">	
+	<link rel="stylesheet" href="plugins/drag-bar/style.css">	
+	<link rel="stylesheet" href="plugins/icon-tips/style.css">
+	<link rel="stylesheet" href="plugins/img-info/style.css">
+	<link rel="stylesheet" href="plugins/list-bar/style.css">
+	<link rel="stylesheet" href="plugins/radiusbox/style.css">
+	<link rel="stylesheet" href="plugins/search-bar/style.css">
+	<link rel="stylesheet" href="plugins/star-tips/style.css">
+	<link rel="stylesheet" href="plugins/slide/style.css">
+	<link rel="stylesheet" href="plugins/switch-button/style.css">
+	<link rel="stylesheet" href="plugins/vedio-player/style.css">
+	
+</head>
+
+<body style="background-color:#e8e8e8;padding-bottom:100px; " class="clearfix">
+	<div class="left-wrap">
+		<div class="imginfo-wrap">
+		</div>
+		<div class="vedio-player-wrap"></div>
+		<p class="auto-info"></p>	<br>
+		<p class="finished-time"></p>
+
+	</div>
+	<div class="right-wrap">
+		<div class="right-top-wrap clearfix">
+			<div class="right-top-left left">
+				<div class="right-top-left-up clearfix">
+					<div class="button-area left clearfix">
+						<ul class="left">
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+					<div class="button-area-right left">
+						<div class="circle-button">
+							<ul class="clearfix">
+								<li class="left"></li>
+								<li class="left"></li>
+								<li class="left"></li>
+								<li class="left"></li>
+								<li class="left"></li>
+							</ul>
+						</div>
+						<div class="box-button clearfix">
+							<div class="check-box left">
+								<ul class="clearfix">
+									<li class="left"></li>
+									<li class="left"></li>
+									<li class="left"></li>
+									<li class="left"></li>
+							</ul>
+							</div>
+							<div class="radius-box left">
+								<ul class="clearfix">
+									<li class="left"></li>
+									<li class="left"></li>
+									<li class="left"></li>
+									<li class="left"></li>
+							</ul>
+							</div>
+						</div>
+						<div class="star">
+							<ul class="clearfix">
+								<li class="left"></li>
+								<li class="left"></li>
+								<li class="left"></li>
+								<li class="left"></li>
+								<li class="left"></li>
+							</ul>
+						</div>				
+					</div>
+				</div>
+				<div class="right-top-left-down">
+					<div class="drag"></div>
+					<div class="drag2"></div>
+
+				</div>
+			</div>
+			<div class="right-top-right left">
+				<div class="icon-tips">
+					<ul class="clearfix">
+						<li class="left"></li>
+						<li class="left"></li>
+						<li class="left"></li>
+						<li class="left"></li>
+						<li class="left"></li>
+					</ul>
+				</div>
+				<div class="search-bar1"></div>
+				<div class="search-bar2"></div>
+				<div class="listbar"></div>
+				<div class="drag-bar"></div>
+				<div class="switch-button">
+					<ul class="clearfix">
+						<li class="left"></li>
+						<li class="left"></li>
+					</ul>
+				</div>
+
+			</div>
+			
+		</div>
+
+		<div class="right-bottom-wrap">
+			<div class="slide-imgs">
+				<img src="plugins/img/picture_1.png" alt="slide-imgs">
+			</div>
+		</div>
+	</div>
+
+<script>
+
+$(function(){
+
+	var $imginfo_wrap = $('.left-wrap .imginfo-wrap').imgInfo({url:'plugins/img/img-heading.png'});
+
+	var $vedio = $('.left-wrap .vedio-player-wrap').vedioPlayer();
+
+	var $auto_info = $('.left-wrap .auto-info').text('-.-	make by :  zhan')
+	$('.finished-time').text('date : 2013 July');
+
+	var $button_li = $('.right-top-left-up .button-area li');
+
+	 $.each($button_li,function(i, val) {
+
+	 	var _button_color = '#ffffff',_font_color = '#9297a0';
+	 	
+			if( i == 3){
+
+	 		_button_color = '#f4622e';
+
+	 		_font_color = '#ffffff';
+
+			}
+
+			if (i == 4) {
+
+			_button_color = '#6c7882';
+
+			_font_color = '#ffffff';
+
+			};
+
+	$(this).circleBtn({name:'button',width:105,height:40,backgroundcolor:_button_color,fontcolor:_font_color});
+
+
+	 });
+
+	 var $circle_button = $('.button-area-right .circle-button li');
+
+	 	$.each($circle_button, function(index, val) {
+
+	 	var _button_color = '#ffffff',_font_color = '#9297a0';
+
+	 		if(index == 2){
+
+	 		_button_color = '#f4622e';
+
+	 		_font_color = '#ffffff';
+
+	 		}
+		
+			if (index == 3) {
+
+			_button_color = '#6c7882';
+
+			_font_color = '#ffffff';
+
+			}
+	 		
+	 		$(this).circleBtn({name:index+1,
+	 			width:35,
+	 			height:35,
+	 			backgroundcolor:_button_color,
+	 			fontcolor:_font_color});
+
+	 	});
+
+	 var $checkbox = $('.button-area-right .box-button .check-box li');
+	 
+	 	$.each($checkbox, function(index, val) {
+
+	 		$(this).checkBox();
+
+	 	});
+
+	 var $radiusbox = $('.button-area-right .box-button .radius-box li');
+
+	 	$.each($radiusbox, function(index, val) {
+
+	 		$(this).radiusBox();
+
+	 	});
+
+	 var $stars = $('.button-area-right .star li'),
+	  		str = 'Your Message for Tooltip will appear here,some textfonna placed here' ;
+
+	 	$.each($stars, function(index, val) {
+
+	 		$(this).starTips(str);
+
+	 	});
+
+	 var $dragbutton =$('.right-top-left-down .drag').dragButton();
+
+	 var $dragbutton2 = $('.right-top-left-down .drag2').dragButton2();
+
+	 var icon_tips_arr = $('.right-top-right .icon-tips li');
+
+	 var str_www = 'http://www.baidu.com';
+
+	 $.each(icon_tips_arr, function(index, val) {
+
+	 	$(this).iconTips(index+1,str_www);
+
+	 });
+
+	 var $search_bar1 = $('.right-top-right .search-bar1').searchBar();
+
+	 var $search_bar2 = $('.right-top-right .search-bar2').searchBar();
+
+	 $search_bar2.find('input').addClass('search-focus').val('Keyword here!')
+
+	 var list_arr=['HTML','CSS','JavaScript','DOM','Jquery'];
+
+	 var $list_bar = $('.right-top-right .listbar').listBar(list_arr);
+
+	 var $drag_bar = $('.right-top-right .drag-bar').dragBar();
+
+	 var $switch_button_arr = $('.right-top-right .switch-button li'); 
+
+	 $.each($switch_button_arr, function(index, val) {
+
+	 	$(this).switchBtn(index+1); 
+
+	 });
+
+	 var x = $('.right-bottom-wrap .slide-imgs').img_slideBar(5);
+
+})
+
+</script>
+
+</body>
+</html>
