@@ -94,8 +94,6 @@
 					cur_trigger = 0;
 				}
 
-				_issettimeout = setTimeout(autoTrigger,5000);
-
 				$('.img-slide-button-outer ul li:eq(' + cur_trigger + ')').trigger('click');
 
 			}
